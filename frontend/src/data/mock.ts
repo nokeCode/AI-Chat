@@ -1,67 +1,42 @@
 export const currentUser = {
-  firstName: "Joy",
-  lastName: "Ezechukwu",
-  fullName: "Joy Ezechukwu",
-  role: "Supervisor",
-  shift: "08:00 - 16:00",
+  firstName: "User",
+  lastName: "Chat",
+  fullName: "User Chat",
   avatar: "https://i.pravatar.cc/150?img=47",
-  email: "joyeze999@gmail.com",
-  phone: "+1 (408) 555-9724",
-  dob: "Jun 23, 1995",
-  location: "Carlifonia, USA",
-  postalCode: "98675",
-  monthlySales: "$2,750",
-  ordersServed: 128,
-  onShiftFor: "6h 42m",
+  email: "user@example.com",
+  phone: "+1 (408) 555-0000",
+};
+
+export const aiAssistant = {
+  name: "AI Assistant",
+  avatar: "https://i.pravatar.cc/150?img=1",
 };
 
 export type Conversation = {
   id: string;
-  name: string;
-  avatar: string;
+  title: string;
   lastMessage: string;
   time: string;
-  unread?: number;
-  kind: "team" | "personal";
 };
 
-export const teamConversations: Conversation[] = [
+export const chatHistory: Conversation[] = [
   {
-    id: "front-of-house",
-    name: "Front of House",
-    avatar: "https://i.pravatar.cc/150?img=32",
-    lastMessage: "Sandra James: Table 12 is ready for checkout.",
-    time: "2 min ago",
-    kind: "team",
+    id: "conv-1",
+    title: "JavaScript Help",
+    lastMessage: "Can you explain async/await?",
+    time: "2 hours ago",
   },
   {
-    id: "kitchen",
-    name: "Kitchen",
-    avatar: "https://i.pravatar.cc/150?img=13",
-    lastMessage: "Chef Daniel: Two medium steaks for Table 7.",
-    time: "Just Now",
-    unread: 8,
-    kind: "team",
-  },
-];
-
-export const personalConversations: Conversation[] = [
-  {
-    id: "maria-gomez",
-    name: "Maria Gomez",
-    avatar: "https://i.pravatar.cc/150?img=45",
-    lastMessage: "Can you approve the void on Order #284?",
-    time: "12 min ago",
-    kind: "personal",
+    id: "conv-2",
+    title: "React Tips",
+    lastMessage: "How to optimize re-renders?",
+    time: "Yesterday",
   },
   {
-    id: "daniel-okafor",
-    name: "Daniel Okafor",
-    avatar: "https://i.pravatar.cc/150?img=14",
-    lastMessage: "I'll handle the large party at 6 PM.",
-    time: "20 min ago",
-    unread: 2,
-    kind: "personal",
+    id: "conv-3",
+    title: "Python Basics",
+    lastMessage: "What's the difference between lists and tuples?",
+    time: "2 days ago",
   },
 ];
 
@@ -78,36 +53,37 @@ export const activeThreadMessages: ChatMessage[] = [
   {
     id: "m1",
     sender: "them",
-    senderName: "Maria",
-    text: "Table 12 is asking for the bill, and also confirm the order please",
-    time: "8:14",
+    senderName: "AI Assistant",
+    text: "Hi! How can I help you today? Ask me anything about programming, writing, or any other topic.",
+    time: "10:00",
   },
   {
     id: "m2",
     sender: "me",
-    text: "Send it through POS now.",
-    time: "8:15",
+    text: "Can you explain how async/await works in JavaScript?",
+    time: "10:02",
     read: true,
   },
   {
     id: "m3",
     sender: "them",
-    senderName: "Sandra",
-    text: "Split payment or single?",
-    time: "8:24",
+    senderName: "AI Assistant",
+    text: "Sure! Async/await is syntactic sugar for working with promises. It makes asynchronous code look and behave more like synchronous code.",
+    time: "10:03",
   },
   {
     id: "m4",
-    sender: "them",
-    senderName: "Maria",
-    text: "How many orders?",
-    time: "8:24",
+    sender: "me",
+    text: "Can you give me a simple example?",
+    time: "10:04",
+    read: true,
   },
   {
     id: "m5",
-    sender: "me",
-    text: "Split, 2 cards.",
-    time: "8:22",
+    sender: "them",
+    senderName: "AI Assistant",
+    text: "Of course! Here's an example of fetching data.",
+    time: "10:05",
     read: true,
   },
 ];
