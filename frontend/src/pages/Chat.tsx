@@ -99,8 +99,8 @@ export default function Chat() {
               ) : (
                 <div key={m.id} className="flex items-end justify-end gap-2 mb-1">
                   <div className="flex flex-col items-end max-w-xs gap-1">
-                    <div className="bg-gold rounded-2xl rounded-br-none px-4 py-2.5 shadow-card">
-                      <p className="text-sm text-brand-darker break-words whitespace-pre-wrap">
+                    <div className="bg-brand rounded-2xl rounded-br-none px-4 py-2.5 shadow-card">
+                      <p className="text-sm text-white break-words whitespace-pre-wrap">
                         {m.text}
                       </p>
                     </div>
